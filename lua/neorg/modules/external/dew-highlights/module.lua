@@ -2,6 +2,7 @@ local neorg = require "neorg.core"
 local modules = neorg.modules
 
 local api = vim.api
+local autocmd = api.nvim_create_autocmd
 
 local module = modules.create "external.dew-highlights"
 
@@ -22,7 +23,7 @@ module.private = {
   end,
 
   set_autocmd = function()
-    api.nvim_create_autocmd({ "FileType" }, {
+    autocmd({ "FileType" }, {
       pattern = "norg",
       callback = function()
         module.private.apply_highlights()
