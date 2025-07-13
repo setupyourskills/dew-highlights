@@ -35,7 +35,14 @@ Make sure all of them are loaded through Neorg’s module system in your config:
 
 ```lua
 ["external.neorg-dew"] = {},
-["external.dew-highlights"] = {},
+["external.dew-highlights"] = {
+  config = {
+    highlights_table = {
+      ["@neorg.markup.verbatim"] = { fg = "#ffab00", italic = true }, -- Customize highlight groups here
+      -- Add other groups as needed
+    },
+  },
+},
 ```
 
 ## Usage
