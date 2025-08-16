@@ -45,6 +45,18 @@ Make sure all of them are loaded through Neorg’s module system in your config:
 },
 ```
 
+### Colorize embedded notes with `Dew Transclude`
+
+When paired with the [Dew Transclude](https://github.com/setupyourskills/dew-transclude) submodule, you can colorify your embedded notes.
+
+Add the following highlight group to the `highlights_table`:
+
+```lua
+["dewTransclude"] = { fg = "#D2DAD7", bg = "#2A3230" },
+```
+
+See the [Dew Transclude](https://github.com/setupyourskills/dew-transclude) submodule for enabling instructions.
+
 ## Usage
 
 You don’t need to do anything else — simply open a `.norg` file and enjoy the improved hightlight experience.
